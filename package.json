@@ -1,0 +1,25 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "Restaurant page for odin project",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rehmanjav/odin-restaurant-page.git"
+  },
+  "author": "Rehman Javaid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rehmanjav/odin-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/rehmanjav/odin-restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}
