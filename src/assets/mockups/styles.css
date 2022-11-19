@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+.rest-name {
+    font-family: 'Pinyon Script';
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    height: 200px;
+}
+
+footer {
+    height: 100px;
+}
+
+header,
+main,
+footer {
+    background-color: rgba(0, 0, 255, 0.367);
+}
