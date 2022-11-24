@@ -1,25 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
+html,
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
 .rest-name {
     font-family: 'Pinyon Script';
+    color: silver;
 }
 
 body {
     background-image: url(../images/background.jpg);
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
     height: 200px;
+    padding: 1rem;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+header > p {
+    margin: 0;
+    font-size: 5rem;
 }
 
 footer {
-    height: 100px;
+    height: 3rem;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: silver;
 }
 
 header,
-main,
 footer {
-    background-color: rgba(0, 0, 255, 0.367);
+    background-color: rgba(4, 4, 63, 0.898);  
+}
+
+.container-btn {
+    display: flex;
+    gap: 50px;
+}
+
+header button {
+    font-family: 'Pinyon Script';
+    font-size: 2rem;
+    color: silver;
+    background: none;
+    border: none;
+}
+
+header button:hover {
+    transform: scale(1.4);
+}
+
+main {
+    background-color: rgba(17, 17, 93, 0.296);
+    min-height: 100px;
+    min-width: 100px;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
