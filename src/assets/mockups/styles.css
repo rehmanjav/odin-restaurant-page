@@ -97,3 +97,33 @@ main {
     margin-bottom: 20px;
     border-radius: 50%;
 }
+
+.div-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+.img-location {
+    height: 400px;
+    width: auto;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-details p {
+    color: white;
+    font-family: 'Helvetica';
+    margin: 5px;
+    font-size: 1.5rem;
+}
+
+
