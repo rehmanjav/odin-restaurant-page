@@ -69,9 +69,31 @@ header button:hover {
 }
 
 main {
-    background-color: rgba(17, 17, 93, 0.296);
+    background-color: rgba(17, 17, 93, 0.419);
     min-height: 100px;
     min-width: 100px;
     margin-left: 5vw;
     margin-right: 5vw;
+}
+
+.div-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.div-home p {
+    font-family: 'Helvetica';
+    color: white;
+    font-size: 1.5rem;
+}
+
+.img-chef {
+    height: 500px;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
 }
