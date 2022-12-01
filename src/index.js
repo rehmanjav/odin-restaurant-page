@@ -9,14 +9,14 @@ class Dish {
     }
 }
 
-menuAppetizers = [new Dish("Smoked Salmon Canapes", 
+let menuAppetizers = [new Dish("Smoked Salmon Canapes", 
                             "Smoked salmon served on cream cheese and rye bread", 
                             "./assets/images/smoked-salmon-canapes.jpeg"),
                   new Dish("Lyonnaise Salad", 
                             "Green salad with seasoned egg", 
                             "./assets/images/lyonnaise-salad.jpeg"),
                 ];
-menuEntrees = [new Dish("Foie Gras", 
+let menuEntrees = [new Dish("Foie Gras", 
                         "Extravagant duck liver", 
                         "./assets/images/foie-gras.jpeg"),
                new Dish("Escargot", 
@@ -27,7 +27,7 @@ menuEntrees = [new Dish("Foie Gras",
                         "./assets/images/salmon-tartare.jpeg"),
             ];
 
-menuMain = [new Dish("Duck à l'Orange", 
+let menuMain = [new Dish("Duck à l'Orange", 
                      "Free range duck with hints of oranges", 
                      "./assets/images/duck-l-orange.jpg"),
             new Dish("Chicken Dijon", 
@@ -41,7 +41,7 @@ menuMain = [new Dish("Duck à l'Orange",
                      "./assets/images/red-snapper-with-citrus.jpg"),
         ];
 
-mainDesserts = [new Dish("Peppermint Meringue", 
+let mainDesserts = [new Dish("Peppermint Meringue", 
                          "Decadent meringue with accents of peppermint", 
                          "./assets/images/peppermint-meringue.jpg"),
                 new Dish("Banana Cream Pie", 
