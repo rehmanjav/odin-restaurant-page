@@ -5,13 +5,19 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     devtool: 'inline-source-map',
+    devServer: {
+        static: './dist',
+    },
+    optimization: {
+        runtimeChunk: 'single',
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title:'Plat Élégante',
         }),
     ],
     output: {
-        filename: 'main.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
