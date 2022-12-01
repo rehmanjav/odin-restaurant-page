@@ -1,4 +1,5 @@
 "use strict";
+import './assets/styles.css';
 
 class Dish {
     constructor(name, descrip, url) {
