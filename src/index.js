@@ -49,4 +49,75 @@ let mainDesserts = [new Dish("Peppermint Meringue",
                          "./assets/images/banana-cream-pie.jpg"),
             ];
 
+function renderIndex() {
+    let body = document.querySelector('body');
+
+    body.innerHTML = `
+    <header>
+        <p class="rest-name">Plat Élégante</p>
+        <div class="container-btn">
+            <button class="btn-home">Home</button>
+            <button class="btn-menu">Menu</button>
+            <button class="btn-contact">Contact</button>
+        </div>
+    </header>
+    <main>
+        
+    </main>
+    <footer>Made by rjava</footer>
+    `;
+
+    renderHome();
+
+    let btnHome = document.querySelector('.btn-home');
+    let btnMenu = document.querySelector('.btn-menu');
+    let btnContact = document.querySelector('.btn-contact');
+
+    btnHome.addEventListener('click', () => {
+        let main = document.querySelector('main');
+        if (!main.firstElementChild.classList.contains("div-home")) {
+            renderHome();
+        }
+    });
+
+    btnMenu.addEventListener('click', () => {
+        let main = document.querySelector('main');
+        if (!main.firstElementChild.classList.contains("div-menu")) {
+            renderMenu();
+        }
+    });
+
+    btnContact.addEventListener('click', () => {
+        let main = document.querySelector('main');
+        if (!main.firstElementChild.classList.contains("div-contact")) {
+            renderContact();
+        }
+    });
+}
+
+function renderHome() {
+    let mainDiv = document.querySelector('main');
+
+    mainDiv.innerHTML = `
+    <div class="div-home">
+            <p>Gourmet French Cuisine</p>
+            <p>Established in 1956</p>
+            <img class="img-chef" src="../images/chef.jpg" alt="image of chef">
+            <p>Enjoy breakfast, lunch, and dinner in our ballroom</p>
+    </div>
+    `
+    let chef = require('./assets/images/chef.jpg');
+    let chefImg = document.querySelector('.img-chef');
+    chefImg.src = chef;
+}
+
+function renderMenu() {
+
+}
+
+function renderContact() {
+
+}
+
 console.log("This is a log.");
+renderIndex();
