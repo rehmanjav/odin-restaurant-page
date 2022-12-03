@@ -123,7 +123,11 @@ main {
     color: white;
     font-family: 'Helvetica';
     margin: 5px;
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+.btn-border {
+    border-bottom: white solid 2px;
 }
 
 

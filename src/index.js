@@ -73,10 +73,15 @@ function renderIndex() {
     let btnMenu = document.querySelector('.btn-menu');
     let btnContact = document.querySelector('.btn-contact');
 
+    btnHome.classList.add("btn-border");
+
     btnHome.addEventListener('click', () => {
         let main = document.querySelector('main');
         if (!main.firstElementChild.classList.contains("div-home")) {
             renderHome();
+            btnHome.classList.add("btn-border");
+            btnMenu.classList.remove("btn-border");
+            btnContact.classList.remove("btn-border");
         }
     });
 
@@ -84,6 +89,9 @@ function renderIndex() {
         let main = document.querySelector('main');
         if (!main.firstElementChild.classList.contains("div-menu")) {
             renderMenu();
+            btnHome.classList.remove("btn-border");
+            btnMenu.classList.add("btn-border");
+            btnContact.classList.remove("btn-border");
         }
     });
 
@@ -91,6 +99,9 @@ function renderIndex() {
         let main = document.querySelector('main');
         if (!main.firstElementChild.classList.contains("div-contact")) {
             renderContact();
+            btnHome.classList.remove("btn-border");
+            btnMenu.classList.remove("btn-border");
+            btnContact.classList.add("btn-border");
         }
     });
 }
@@ -116,8 +127,27 @@ function renderMenu() {
 }
 
 function renderContact() {
+    let mainDiv = document.querySelector('main');
+
+    mainDiv.innerHTML = `
+    <div class="div-contact">
+            <div class="contact-details">
+                <p>Telephone: XXX-XXX-XXXX</p>
+                <p>Hours of Operation</p>
+                <p>7 days a week</p>
+                <p>Brekfast: 6am - 9am</p>
+                <p>Lunch: 12:00pm - 2pm</p>
+                <p>Dinner: 6pm - 10pm</p>
+            </div>
+            <div>
+                <img class="img-location" src="../images/location.png" alt="map">
+            </div>
+        </div>
+    `
+    let map = require('./assets/images/location.png');
+    let mapImg = document.querySelector('.img-location');
+    mapImg.src = map;
 
 }
 
-console.log("This is a log.");
 renderIndex();
