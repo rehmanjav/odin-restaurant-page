@@ -11,42 +11,42 @@ class Dish {
 
 let menuAppetizers = [new Dish("Smoked Salmon Canapes", 
                             "Smoked salmon served on cream cheese and rye bread", 
-                            "./assets/images/smoked-salmon-canapes.jpeg"),
+                            "smoked-salmon-canapes.jpeg"),
                   new Dish("Lyonnaise Salad", 
                             "Green salad with seasoned egg", 
-                            "./assets/images/lyonnaise-salad.jpeg"),
+                            "lyonnaise-salad.jpeg"),
                 ];
 let menuEntrees = [new Dish("Foie Gras", 
                         "Extravagant duck liver", 
-                        "./assets/images/foie-gras.jpeg"),
+                        "foie-gras.jpeg"),
                new Dish("Escargot", 
                         "Succulent baked snails", 
-                        "./assets/images/escargot.jpeg"),
+                        "escargot.jpeg"),
                new Dish("Salmon Tartare", 
                         "Wild caught Salmon served fresh daily", 
-                        "./assets/images/salmon-tartare.jpeg"),
+                        "salmon-tartare.jpeg"),
             ];
 
 let menuMain = [new Dish("Duck à l'Orange", 
                      "Free range duck with hints of oranges", 
-                     "./assets/images/duck-l-orange.jpg"),
+                     "duck-l-orange.jpg"),
             new Dish("Chicken Dijon", 
                      "Chicken with hints of native mustard", 
-                     "./assets/images/chicken-dijon.jpg"),
+                     "chicken-dijon.jpg"),
             new Dish("Bouillabaisse", 
                      "Soup with fresh caught seafood", 
-                     "./assets/images/bouillabaisse.jpg"),
+                     "bouillabaisse.jpg"),
             new Dish("Red Snapper with Citrus and Fennel", 
                      "Fresh caught red snapper with herbs", 
-                     "./assets/images/red-snapper-with-citrus.jpg"),
+                     "red-snapper-with-citrus.jpg"),
         ];
 
-let mainDesserts = [new Dish("Peppermint Meringue", 
+let menuDesserts = [new Dish("Peppermint Meringue", 
                          "Decadent meringue with accents of peppermint", 
-                         "./assets/images/peppermint-meringue.jpg"),
+                         "peppermint-meringue.jpg"),
                 new Dish("Banana Cream Pie", 
                          "Rich pie with bananas and cream", 
-                         "./assets/images/banana-cream-pie.jpg"),
+                         "banana-cream-pie.jpg"),
             ];
 
 function renderIndex() {
@@ -228,6 +228,12 @@ function renderAppetizers() {
     
     </div>
     `;
+
+    let divAppetizers = document.querySelector(".div-appetizers");
+
+    for (let dish of menuAppetizers) {
+        divAppetizers.append(generateCard(dish));
+    }
 }
 
 function renderEntrees() {
@@ -238,6 +244,12 @@ function renderEntrees() {
     
     </div>
     `;
+
+    let divEntrees = document.querySelector(".div-entrees");
+
+    for (let dish of menuEntrees) {
+        divEntrees.append(generateCard(dish));
+    }
 }
 
 function renderMain() {
@@ -248,6 +260,12 @@ function renderMain() {
     
     </div>
     `;
+
+    let divMain = document.querySelector(".div-main");
+
+    for (let dish of menuMain) {
+        divMain.append(generateCard(dish));
+    }
 }
 
 function renderDesserts() {
@@ -258,12 +276,33 @@ function renderDesserts() {
     
     </div>
     `;
+
+    let divDesserts = document.querySelector(".div-desserts");
+
+    for (let dish of menuDesserts) {
+        divDesserts.append(generateCard(dish));
+    }
 }
 
-function generateCard() {
+function generateCard(dish) {
+    let div = document.createElement('div');
+    div.classList.add('card');
 
+    div.innerHTML = `
+    <img class="img-menu" src="${images[dish.url]}" alt="menu image">
+    <p>${dish.descrip}</p>
+    `;
+
+    return div;
+}
+
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
 }
 
 // START
 
+const images = importAll(require.context('./assets/images', false, /\.(png|jpe?g|svg)$/));
 renderIndex();
