@@ -126,8 +126,38 @@ main {
     font-size: 1rem;
 }
 
+.btn-container {
+    display: flex;
+    gap: 50px;
+}
+
+.btn-container button {
+    font-family: 'Pinyon Script';
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.btn-container button:hover {
+    transform: scale(1.4);
+}
+
+.div-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 .btn-border {
     border-bottom: white solid 2px;
 }
+
+.btn-container .btn-border {
+    border-bottom: white solid 2px;
+} 
 
 

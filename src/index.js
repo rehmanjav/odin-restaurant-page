@@ -127,19 +127,72 @@ function renderMenu() {
 
     mainDiv.innerHTML = `
     <div class="div-menu">
-            <div class="contact-details">
-                <p>Telephone: XXX-XXX-XXXX</p>
-                <p>Hours of Operation</p>
-                <p>7 days a week</p>
-                <p>Brekfast: 6am - 9am</p>
-                <p>Lunch: 12:00pm - 2pm</p>
-                <p>Dinner: 6pm - 10pm</p>
-            </div>
-            <div>
-                <img class="img-location" src="../images/location.png" alt="map">
+        <div class="btn-container">
+            <button class="btn-appetizers">Appetizers</button>
+            <button class="btn-entrees">Entrées</button>
+            <button class="btn-main">Main</button>
+            <button class="btn-desserts">Desserts</button>
+        </div>
+        <div class="card-container">
+            <div class="div-appetizers">
+            
             </div>
         </div>
+    </div>
     `
+
+    renderAppetizers();
+
+    let btnAppetizers = document.querySelector('.btn-appetizers');
+    let btnEntrees = document.querySelector('.btn-entrees');
+    let btnMain = document.querySelector('.btn-main');
+    let btnDesserts = document.querySelector('.btn-desserts');
+
+    btnAppetizers.classList.add("btn-border");
+
+    btnAppetizers.addEventListener('click', () => {
+        let cardContainer = document.querySelector('.card-container');
+        if (!cardContainer.firstElementChild.classList.contains("div-appetizers")) {
+            renderAppetizers();
+            btnAppetizers.classList.add("btn-border");
+            btnEntrees.classList.remove("btn-border");
+            btnMain.classList.remove("btn-border");
+            btnDesserts.classList.remove("btn-border");
+        }
+    });
+
+    btnEntrees.addEventListener('click', () => {
+        let cardContainer = document.querySelector('.card-container');
+        if (!cardContainer.firstElementChild.classList.contains("div-entrees")) {
+            renderEntrees();
+            btnAppetizers.classList.remove("btn-border");
+            btnEntrees.classList.add("btn-border");
+            btnMain.classList.remove("btn-border");
+            btnDesserts.classList.remove("btn-border");
+        }
+    });
+
+    btnMain.addEventListener('click', () => {
+        let cardContainer = document.querySelector('.card-container');
+        if (!cardContainer.firstElementChild.classList.contains("div-main")) {
+            renderMain();
+            btnAppetizers.classList.remove("btn-border");
+            btnEntrees.classList.remove("btn-border");
+            btnMain.classList.add("btn-border");
+            btnDesserts.classList.remove("btn-border");
+        }
+    });
+
+    btnDesserts.addEventListener('click', () => {
+        let cardContainer = document.querySelector('.card-container');
+        if (!cardContainer.firstElementChild.classList.contains("div-desserts")) {
+            renderDesserts();
+            btnAppetizers.classList.remove("btn-border");
+            btnEntrees.classList.remove("btn-border");
+            btnMain.classList.remove("btn-border");
+            btnDesserts.classList.add("btn-border");
+        }
+    });
 
 }
 
@@ -166,5 +219,51 @@ function renderContact() {
     mapImg.src = map;
 
 }
+
+function renderAppetizers() {
+    let cardContainer = document.querySelector(".card-container");
+
+    cardContainer.innerHTML = `
+    <div class="div-appetizers">
+    
+    </div>
+    `;
+}
+
+function renderEntrees() {
+    let cardContainer = document.querySelector(".card-container");
+
+    cardContainer.innerHTML = `
+    <div class="div-entrees">
+    
+    </div>
+    `;
+}
+
+function renderMain() {
+    let cardContainer = document.querySelector(".card-container");
+
+    cardContainer.innerHTML = `
+    <div class="div-main">
+    
+    </div>
+    `;
+}
+
+function renderDesserts() {
+    let cardContainer = document.querySelector(".card-container");
+
+    cardContainer.innerHTML = `
+    <div class="div-desserts">
+    
+    </div>
+    `;
+}
+
+function generateCard() {
+
+}
+
+// START
 
 renderIndex();
