@@ -123,6 +123,23 @@ function renderHome() {
 }
 
 function renderMenu() {
+    let mainDiv = document.querySelector('main');
+
+    mainDiv.innerHTML = `
+    <div class="div-menu">
+            <div class="contact-details">
+                <p>Telephone: XXX-XXX-XXXX</p>
+                <p>Hours of Operation</p>
+                <p>7 days a week</p>
+                <p>Brekfast: 6am - 9am</p>
+                <p>Lunch: 12:00pm - 2pm</p>
+                <p>Dinner: 6pm - 10pm</p>
+            </div>
+            <div>
+                <img class="img-location" src="../images/location.png" alt="map">
+            </div>
+        </div>
+    `
 
 }
 
