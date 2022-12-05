@@ -158,6 +158,13 @@ main {
 
 .btn-container .btn-border {
     border-bottom: white solid 2px;
-} 
+}
+
+.div-appetizers,
+.div-entrees,
+.div-main,
+.div-desserts {
+    display: flex;
+}
 
 
