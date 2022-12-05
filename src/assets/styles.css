@@ -3,7 +3,7 @@
 html,
 body {
     min-height: 100vh;
-    min-width: 100vw;
+    max-width: 100vw;
     margin: 0;
     padding: 0;
 }
@@ -48,7 +48,7 @@ footer {
 
 header,
 footer {
-    background-color: rgba(4, 4, 63, 0.898);  
+    background-color: rgba(4, 4, 63, 0.898); 
 }
 
 .container-btn {
@@ -69,7 +69,7 @@ header button:hover {
 }
 
 main {
-    background-color: rgba(17, 17, 93, 0.419);
+    background-color: rgba(4, 4, 63, 0.898);
     min-height: 100px;
     min-width: 100px;
     margin-left: 5vw;
@@ -149,7 +149,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
+    gap: 50px;
 }
 
 .btn-border {
@@ -165,6 +166,31 @@ main {
 .div-main,
 .div-desserts {
     display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: silver;
+    padding: 10px;
+    width: 400px;
+    
+}
+
+.card p {
+    color: black;
+    font-size: 1.5rem;
+    width: 90%;
+}
+
+.card img {
+    height: auto;
+    width: 300px;
+    border-radius: 50px;
 }
 
 
